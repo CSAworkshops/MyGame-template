@@ -10,7 +10,7 @@ var config = {
   physics: {
     //Typ der Physic
     default: "arcade", 
-    //Eigenschaften der Phsic
+    //Eigenschaften der Physic
     arcade: {
       //Schwerkraft im spiel, wohin Fallen Objekte
       gravity: {
@@ -35,7 +35,7 @@ var game = new Phaser.Game(config);
 
 //Lädt zu anfang des Spiels
 function preload() {
-  this.load.image("yoda", "yoda.png"); //Bild Laden und bennenen
+  this.load.image("rabbit", "rabbit.png"); //Bild Laden und benennen
 }
 
 //Beim erstellen des Spiels
@@ -43,7 +43,7 @@ function create() {
   //Bestimmt die Größe der Welt, also die Ränder an denen gestoppt werden soll
   this.physics.world.setBounds(0, 0, 800, 600);
   //Fügt ein neues Bild mit Physikalischen Eigenschaften hinzu und speichert es in der variable img
-  let img = this.physics.add.image(400, 300, "yoda");
+  let img = this.physics.add.image(400, 300, "rabbit");
   //Aktiviert die Kollision, d.h. man sagt dem Bild das es an den Rändern der Welt stoppen soll
   img.setCollideWorldBounds(true);
 }
